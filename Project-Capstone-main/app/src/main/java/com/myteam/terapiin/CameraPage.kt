@@ -110,6 +110,7 @@ class CameraPage: AppCompatActivity() {
         capture_button.visibility = View.VISIBLE
         btnUpload.visibility = View.INVISIBLE
         btnCancelUpload.visibility = View.INVISIBLE
+        btnPredictUpload.visibility = View.INVISIBLE
         btnDoneUpload.visibility = View.INVISIBLE
         binding.imagePreview.setImageURI(null)
         if (execute<=1){
@@ -218,7 +219,7 @@ class CameraPage: AppCompatActivity() {
                         btnCancelUpload.visibility = View.INVISIBLE
                         Toast.makeText(this@CameraPage, "Upload Berhasil", Toast.LENGTH_SHORT).show()
                         linearPG.visibility = View.INVISIBLE
-                        btnDoneUpload.visibility = View.VISIBLE
+                        btnPredictUpload.visibility = View.VISIBLE
                         if (intent.getIntExtra("openmouth",0) == 1){
                             openMouthPredict()
                         } else if (intent.getIntExtra("puffcheek",0) == 2){
@@ -246,10 +247,14 @@ class CameraPage: AppCompatActivity() {
     private fun openMouthPredict() {
         val listPose = mutableListOf<String>()
         val listAkurasi = mutableListOf<Double>()
-        val url = "http://34.101.178.227:8000/?file=$nameRand"
+        val url = "http://34.101.152.48:8000/?file=$nameRand"
         val queue = Volley.newRequestQueue(this)
         val request = StringRequest(Request.Method.GET, url,
             Response.Listener { response ->
+                btnDoneUpload.visibility = View.VISIBLE
+                btnDoneUpload.setOnClickListener{
+                    startActivity(Intent(this@CameraPage,TerapiMenu::class.java))
+                }
                 val data = response.toString()
                 var jArray = JSONArray(data)
                 for (i in 0..jArray.length()-1){
@@ -288,19 +293,23 @@ class CameraPage: AppCompatActivity() {
                     alertDialog.show()
                 }
             }, Response.ErrorListener {
-                Log.e("Errorku",it.toString())
+                Toast.makeText(this@CameraPage, "Gagal Memprediksi, Error : $it", Toast.LENGTH_SHORT).show()
             })
-        request.setRetryPolicy(DefaultRetryPolicy(20*1000,2,DefaultRetryPolicy.DEFAULT_BACKOFF_MULT))
+        request.setRetryPolicy(DefaultRetryPolicy(10*1000,2,DefaultRetryPolicy.DEFAULT_BACKOFF_MULT))
         queue.add(request)
     }
 
     private fun puffCheekPredict() {
         val listPose = mutableListOf<String>()
         val listAkurasi = mutableListOf<Double>()
-        val url = "http://34.101.178.227:8000/?file=$nameRand"
+        val url = "http://34.101.152.48:8000/?file=$nameRand"
         val queue = Volley.newRequestQueue(this)
         val request = StringRequest(Request.Method.GET, url,
             Response.Listener { response ->
+                btnDoneUpload.visibility = View.VISIBLE
+                btnDoneUpload.setOnClickListener{
+                    startActivity(Intent(this@CameraPage,TerapiMenu::class.java))
+                }
                 val data = response.toString()
                 var jArray = JSONArray(data)
                 for (i in 0..jArray.length()-1){
@@ -339,7 +348,7 @@ class CameraPage: AppCompatActivity() {
                     alertDialog.show()
                 }
             }, Response.ErrorListener {
-                Log.e("Errorku",it.toString())
+                Toast.makeText(this@CameraPage, "Gagal Memprediksi, Error : $it", Toast.LENGTH_SHORT).show()
             })
         request.setRetryPolicy(DefaultRetryPolicy(20*1000,2,DefaultRetryPolicy.DEFAULT_BACKOFF_MULT))
         queue.add(request)
@@ -348,10 +357,14 @@ class CameraPage: AppCompatActivity() {
     private fun showTeethPredict() {
         val listPose = mutableListOf<String>()
         val listAkurasi = mutableListOf<Double>()
-        val url = "http://34.101.178.227:8000/?file=$nameRand"
+        val url = "http://34.101.152.48:8000/?file=$nameRand"
         val queue = Volley.newRequestQueue(this)
         val request = StringRequest(Request.Method.GET, url,
             Response.Listener { response ->
+                btnDoneUpload.visibility = View.VISIBLE
+                btnDoneUpload.setOnClickListener{
+                    startActivity(Intent(this@CameraPage,TerapiMenu::class.java))
+                }
                 val data = response.toString()
                 var jArray = JSONArray(data)
                 for (i in 0..jArray.length()-1){
@@ -390,7 +403,7 @@ class CameraPage: AppCompatActivity() {
                     alertDialog.show()
                 }
             }, Response.ErrorListener {
-                Log.e("Errorku",it.toString())
+                Toast.makeText(this@CameraPage, "Gagal Memprediksi, Error : $it", Toast.LENGTH_SHORT).show()
             })
         request.setRetryPolicy(DefaultRetryPolicy(20*1000,2,DefaultRetryPolicy.DEFAULT_BACKOFF_MULT))
         queue.add(request)
@@ -399,10 +412,14 @@ class CameraPage: AppCompatActivity() {
     private fun smilePredict(){
         val listPose = mutableListOf<String>()
         val listAkurasi = mutableListOf<Double>()
-        val url = "http://34.101.178.227:8000/?file=$nameRand"
+        val url = "http://34.101.152.48:8000/?file=$nameRand"
         val queue = Volley.newRequestQueue(this)
         val request = StringRequest(Request.Method.GET, url,
             Response.Listener { response ->
+                btnDoneUpload.visibility = View.VISIBLE
+                btnDoneUpload.setOnClickListener{
+                    startActivity(Intent(this@CameraPage,TerapiMenu::class.java))
+                }
                 val data = response.toString()
                 var jArray = JSONArray(data)
                 for (i in 0..jArray.length()-1){
@@ -441,7 +458,7 @@ class CameraPage: AppCompatActivity() {
                     alertDialog.show()
                 }
             }, Response.ErrorListener {
-                Log.e("Errorku",it.toString())
+                Toast.makeText(this@CameraPage, "Gagal Memprediksi, Error : $it", Toast.LENGTH_SHORT).show()
             })
         request.setRetryPolicy(DefaultRetryPolicy(20*1000,2,DefaultRetryPolicy.DEFAULT_BACKOFF_MULT))
         queue.add(request)
@@ -450,10 +467,14 @@ class CameraPage: AppCompatActivity() {
     private fun sneerPredict() {
         val listPose = mutableListOf<String>()
         val listAkurasi = mutableListOf<Double>()
-        val url = "http://34.101.178.227:8000/?file=$nameRand"
+        val url = "http://34.101.152.48:8000/?file=$nameRand"
         val queue = Volley.newRequestQueue(this)
         val request = StringRequest(Request.Method.GET, url,
             Response.Listener { response ->
+                btnDoneUpload.visibility = View.VISIBLE
+                btnDoneUpload.setOnClickListener{
+                    startActivity(Intent(this@CameraPage,TerapiMenu::class.java))
+                }
                 val data = response.toString()
                 var jArray = JSONArray(data)
                 for (i in 0..jArray.length()-1){
@@ -492,7 +513,7 @@ class CameraPage: AppCompatActivity() {
                     alertDialog.show()
                 }
             }, Response.ErrorListener {
-                Log.e("Errorku",it.toString())
+                Toast.makeText(this@CameraPage, "Gagal Memprediksi, Error : $it", Toast.LENGTH_SHORT).show()
             })
         request.setRetryPolicy(DefaultRetryPolicy(20*1000,2,DefaultRetryPolicy.DEFAULT_BACKOFF_MULT))
         queue.add(request)

@@ -41,6 +41,35 @@
                 android:textColor="@color/white" />
         </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/linearLP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ProgressBar
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Loading Predict..."
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
 
     <ImageView
         android:id="@+id/imagePreview"
@@ -79,13 +108,27 @@
         app:srcCompat="@drawable/ic_shutter_normal" />
 
     <Button
-        android:id="@+id/btnDoneUpload"
+        android:id="@+id/btnPredictUpload"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/light_red"
         android:clickable="false"
         android:text="@string/sedang_memprediksi"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnDoneUpload"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/light_red"
+        android:clickable="false"
+        android:text="@string/selesai"
         android:textStyle="bold"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"

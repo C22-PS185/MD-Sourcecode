@@ -36,7 +36,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/terapiinImage"
         android:layout_width="378dp"
         android:layout_height="230dp"
         android:layout_marginBottom="32dp"
