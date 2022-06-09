@@ -1,7 +1,7 @@
 {
   "project_info": {
-    "project_number": "764654776608",
-    "project_id": "c22-ps185",
+    "project_number": "[YOUR_PROJECT_NUMBER]",
+    "project_id": "[YOUR_PROJECT_ID]",
     "storage_bucket": "c22-ps185.appspot.com"
   },
   "client": [
@@ -20,7 +20,7 @@
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBMld_ot-qYh6rCK4b5jPzgZFOyWzgkkJU"
+          "current_key": "[YOUR_API_KEY]"
         }
       ],
       "services": {
