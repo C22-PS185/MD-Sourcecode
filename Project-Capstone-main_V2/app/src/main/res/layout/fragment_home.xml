@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".fragments.HomeFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:id="@+id/home_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/menu_terapi"
+            android:textColor="#000000"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/terapi_camera"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/stroke_image"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingTop="20dp"
+            android:paddingBottom="40dp"
+            android:src="@drawable/face"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/home_title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Wajah"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/terapi_camera"
+            app:layout_constraintEnd_toEndOf="@+id/terapi_camera"
+            app:layout_constraintStart_toStartOf="@+id/terapi_camera" />
+
+        <ImageView
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/terapiFisik"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:paddingBottom="40dp"
+            android:paddingTop="20dp"
+            android:background="@drawable/stroke_image"
+            android:src="@drawable/fisik"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/terapi_camera" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Fisik"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/terapiFisik"
+            app:layout_constraintEnd_toEndOf="@+id/terapiFisik"
+            app:layout_constraintStart_toStartOf="@+id/terapiFisik" />
+
+        <ImageView
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/terapiSuara"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/stroke_image"
+            android:paddingTop="20dp"
+            android:paddingBottom="40dp"
+            android:src="@drawable/sound"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/terapiFisik" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Suara"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/terapiSuara"
+            app:layout_constraintEnd_toEndOf="@+id/terapiSuara"
+            app:layout_constraintStart_toStartOf="@+id/terapiSuara" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

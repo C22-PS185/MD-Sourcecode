@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "764654776608",
+    "project_id": "c22-ps185",
+    "storage_bucket": "c22-ps185.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:764654776608:android:109ecd68d42e12ea4ba745",
+        "android_client_info": {
+          "package_name": "com.myteam.terapiin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "764654776608-gq3boha2if35kff89o8qtjm1q1sfinj0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMld_ot-qYh6rCK4b5jPzgZFOyWzgkkJU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "764654776608-gq3boha2if35kff89o8qtjm1q1sfinj0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
