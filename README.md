@@ -7,7 +7,7 @@ Terapi.in is an android application to help post-stroke patients get rehabilitat
 https://drive.google.com/file/d/1c--D-Xig3viUrpRdDtGLwUvEkBE97Nmy/view?usp=sharing
 
 ### TECHNOLOGIES
-We built our android application to provide post stroke patients by utilizing the android phone camera. From the camera phone, the data will be uploaded to the firebase storage and then processed to the firebase cloud function. We use the library volley to help connect to the API and retrieve data that has been processed in the cloud function, then the data will be displayed in the UI.
+We built our android application to provide therapy to post-stroke patients by utilizing the android phone camera. From camera phone, data will be uploaded to firebase storage and then saved to firebase cloud function. We use the volley library to help connect to the API and retrieve the processed data in the cloud function, then the data will be displayed in the UI.
 
 #### Library:
 - datastore-preferences:1.0.0
