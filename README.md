@@ -18,4 +18,4 @@ We built our android application to provide post stroke patients by utilizing th
 - Firebase Storage 
 - Firebase Cloud Function 
 - Volley 
-- DPreferences DataStore
+- Preferences DataStore
